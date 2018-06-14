@@ -107,10 +107,10 @@
 * Добавить `.withActionViews(view: ActionsView)` в ваш rx-поток: 
 ```kotlin
 dataRepository.getAll()
-    .withActionViews(this)
+    .withActionViews(view)
     .execute({
-        data.value = it
-        isContentEmpty.value = gifts.value!!.isEmpty()
+        view.setData(it)
+        isContentEmpty.value = it.isEmpty()
     })
 ```
 Эти действия могут показаться сложными, но как показывает практика, для своего проекта вы сделаете это один раз, а дальше просто будете использовать данный механизм.

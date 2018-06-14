@@ -3,6 +3,7 @@ package com.tanchuev.actionviews.mvp.utils
 import android.view.View
 import com.tanchuev.actionviews.mvp.R
 import com.tanchuev.actionviews.mvp.view.*
+import com.tanchuev.actionviews.mvp.view.base.ActionsView
 import io.reactivex.*
 import io.reactivex.Observable
 import java.net.ConnectException
@@ -22,7 +23,7 @@ val NETWORK_EXCEPTIONS = listOf(
 
 // region WITH DO ON ACTION
 fun <T> Observable<T>.withActionViews(
-    view: HasActionViews,
+    view: ActionsView,
     contentView: View = view.contentActionView,
     loadingView: LoadingView? = view.loadingActionView,
     noInternetView: NoInternetView? = view.noInternetActionView,
@@ -47,7 +48,7 @@ fun <T> Observable<T>.withActionViews(
         ).withLoadingView(doOnLoadStart, doOnLoadEnd)
 
 fun <T> Flowable<T>.withActionViews(
-    view: HasActionViews,
+    view: ActionsView,
     contentView: View = view.contentActionView,
     loadingView: LoadingView? = view.loadingActionView,
     noInternetView: NoInternetView? = view.noInternetActionView,
@@ -71,7 +72,7 @@ fun <T> Flowable<T>.withActionViews(
     ).withLoadingView(doOnLoadStart, doOnLoadEnd)
 
 fun <T> Single<T>.withActionViews(
-    view: HasActionViews,
+    view: ActionsView,
     contentView: View = view.contentActionView,
     loadingView: LoadingView? = view.loadingActionView,
     noInternetView: NoInternetView? = view.noInternetActionView,
@@ -95,7 +96,7 @@ fun <T> Single<T>.withActionViews(
     ).withLoadingView(doOnLoadStart, doOnLoadEnd)
 
 fun <T> Maybe<T>.withActionViews(
-    view: HasActionViews,
+    view: ActionsView,
     contentView: View = view.contentActionView,
     loadingView: LoadingView? = view.loadingActionView,
     noInternetView: NoInternetView? = view.noInternetActionView,
@@ -119,7 +120,7 @@ fun <T> Maybe<T>.withActionViews(
     ).withLoadingView(doOnLoadStart, doOnLoadEnd)
 
 fun Completable.withActionViews(
-    view: HasActionViews,
+    view: ActionsView,
     contentView: View = view.contentActionView,
     loadingView: LoadingView? = view.loadingActionView,
     noInternetView: NoInternetView? = view.noInternetActionView,

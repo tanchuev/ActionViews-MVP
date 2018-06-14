@@ -1,4 +1,9 @@
-package com.tanchuev.actionviews.mvp.view
+package com.tanchuev.actionviews.mvp.view.base
+
+import com.tanchuev.actionviews.mvp.view.EmptyContentView
+import com.tanchuev.actionviews.mvp.view.ErrorView
+import com.tanchuev.actionviews.mvp.view.LoadingView
+import com.tanchuev.actionviews.mvp.view.NoInternetView
 
 
 /**

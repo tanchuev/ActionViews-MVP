@@ -14,7 +14,11 @@ class BaseMaybeObserver<T> : DisposableMaybeObserver<T> {
     private var onComplete: Action? = null
     private var onError: Consumer<Throwable>? = null
 
-    constructor(onSuccess: ((T) -> Unit)? = null, onComplete: (() -> Unit)? = null, onError: ((Throwable) -> Unit)? = null) {
+    constructor(
+        onSuccess: ((T) -> Unit)? = null,
+        onComplete: (() -> Unit)? = null,
+        onError: ((Throwable) -> Unit)? = null
+    ) {
         if (onSuccess != null) {
             this.onSuccess = Consumer { onSuccess(it) }
         }

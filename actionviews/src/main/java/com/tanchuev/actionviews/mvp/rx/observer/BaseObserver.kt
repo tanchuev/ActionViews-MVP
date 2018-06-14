@@ -14,7 +14,11 @@ class BaseObserver<T> : DisposableObserver<T> {
     private var onError: Consumer<Throwable>? = null
     private var onComplete: Action? = null
 
-    constructor(onNext: ((T) -> Unit)? = null, onComplete: (() -> Unit)? = null, onError: ((Throwable) -> Unit)? = null) {
+    constructor(
+        onNext: ((T) -> Unit)? = null,
+        onComplete: (() -> Unit)? = null,
+        onError: ((Throwable) -> Unit)? = null
+    ) {
         if (onNext != null) {
             this.onNext = Consumer { onNext(it) }
         }

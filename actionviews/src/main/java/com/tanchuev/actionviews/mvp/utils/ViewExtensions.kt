@@ -101,14 +101,14 @@ fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false):
 
 fun ImageView.setImage(url: String?) {
     Glide.with(context)
-            .load(url)
-            .into(this)
+        .load(url)
+        .into(this)
 }
 
 fun ImageView.setImage(@RawRes @DrawableRes imageId: Int?) {
     Glide.with(context)
-            .load(imageId)
-            .into(this)
+        .load(imageId)
+        .into(this)
 }
 
 fun <V : View> Activity.findViewByIdNullable(@IdRes id: Int): V? {

@@ -4,9 +4,9 @@ import android.content.Context
 import android.support.annotation.StringRes
 import android.widget.LinearLayout
 import android.widget.Toast
-import kotlinx.android.synthetic.main.l_toast_view.view.*
 import com.tanchuev.actionviews.mvp.R
 import com.tanchuev.actionviews.mvp.view.ErrorView
+import kotlinx.android.synthetic.main.l_toast_view.view.*
 
 /**
  * @author tanchuev

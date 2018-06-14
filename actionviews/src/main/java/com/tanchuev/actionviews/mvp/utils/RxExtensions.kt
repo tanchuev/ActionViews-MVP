@@ -1,7 +1,6 @@
 package com.tanchuev.actionviews.mvp.utils
 
 import com.tanchuev.actionviews.mvp.rx.observer.*
-import com.tanchuev.actionviews.viewmodel.rx.observer.*
 import io.reactivex.*
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

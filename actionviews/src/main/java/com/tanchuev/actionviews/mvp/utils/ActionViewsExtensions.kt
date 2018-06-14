@@ -1,8 +1,8 @@
 package com.tanchuev.actionviews.mvp.utils
 
 import android.view.View
-import com.tanchuev.actionviews.mvp.view.*
 import com.tanchuev.actionviews.mvp.R
+import com.tanchuev.actionviews.mvp.view.*
 import io.reactivex.*
 import io.reactivex.Observable
 import java.net.ConnectException
@@ -29,7 +29,7 @@ fun <T> Observable<T>.withActionViews(
     emptyContentView: EmptyContentView? = view.emptyContentActionView,
     errorView: ErrorView = view.errorActionView,
     doOnLoadStart: () -> Unit = { doOnLoadSubscribe(contentView, loadingView) },
-    doOnLoadEnd: () -> Unit = {doOnLoadComplete(contentView, loadingView) },
+    doOnLoadEnd: () -> Unit = { doOnLoadComplete(contentView, loadingView) },
     doOnStartNoInternet: () -> Unit = { doOnNoInternetSubscribe(contentView, noInternetView) },
     doOnNoInternet: (Throwable) -> Unit = { doOnNoInternet(contentView, errorView, noInternetView) },
     doOnStartEmptyContent: () -> Unit = { doOnEmptyContentSubscribe(contentView, emptyContentView) },
@@ -54,7 +54,7 @@ fun <T> Flowable<T>.withActionViews(
     emptyContentView: EmptyContentView? = view.emptyContentActionView,
     errorView: ErrorView = view.errorActionView,
     doOnLoadStart: () -> Unit = { doOnLoadSubscribe(contentView, loadingView) },
-    doOnLoadEnd: () -> Unit = {doOnLoadComplete(contentView, loadingView) },
+    doOnLoadEnd: () -> Unit = { doOnLoadComplete(contentView, loadingView) },
     doOnStartNoInternet: () -> Unit = { doOnNoInternetSubscribe(contentView, noInternetView) },
     doOnNoInternet: (Throwable) -> Unit = { doOnNoInternet(contentView, errorView, noInternetView) },
     doOnStartEmptyContent: () -> Unit = { doOnEmptyContentSubscribe(contentView, emptyContentView) },
@@ -78,7 +78,7 @@ fun <T> Single<T>.withActionViews(
     emptyContentView: EmptyContentView? = view.emptyContentActionView,
     errorView: ErrorView = view.errorActionView,
     doOnLoadStart: () -> Unit = { doOnLoadSubscribe(contentView, loadingView) },
-    doOnLoadEnd: () -> Unit = {doOnLoadComplete(contentView, loadingView) },
+    doOnLoadEnd: () -> Unit = { doOnLoadComplete(contentView, loadingView) },
     doOnStartNoInternet: () -> Unit = { doOnNoInternetSubscribe(contentView, noInternetView) },
     doOnNoInternet: (Throwable) -> Unit = { doOnNoInternet(contentView, errorView, noInternetView) },
     doOnStartEmptyContent: () -> Unit = { doOnEmptyContentSubscribe(contentView, emptyContentView) },
@@ -102,7 +102,7 @@ fun <T> Maybe<T>.withActionViews(
     emptyContentView: EmptyContentView? = view.emptyContentActionView,
     errorView: ErrorView = view.errorActionView,
     doOnLoadStart: () -> Unit = { doOnLoadSubscribe(contentView, loadingView) },
-    doOnLoadEnd: () -> Unit = {doOnLoadComplete(contentView, loadingView) },
+    doOnLoadEnd: () -> Unit = { doOnLoadComplete(contentView, loadingView) },
     doOnStartNoInternet: () -> Unit = { doOnNoInternetSubscribe(contentView, noInternetView) },
     doOnNoInternet: (Throwable) -> Unit = { doOnNoInternet(contentView, errorView, noInternetView) },
     doOnStartEmptyContent: () -> Unit = { doOnEmptyContentSubscribe(contentView, emptyContentView) },
@@ -126,7 +126,7 @@ fun Completable.withActionViews(
     emptyContentView: EmptyContentView? = view.emptyContentActionView,
     errorView: ErrorView = view.errorActionView,
     doOnLoadStart: () -> Unit = { doOnLoadSubscribe(contentView, loadingView) },
-    doOnLoadEnd: () -> Unit = {doOnLoadComplete(contentView, loadingView) },
+    doOnLoadEnd: () -> Unit = { doOnLoadComplete(contentView, loadingView) },
     doOnStartNoInternet: () -> Unit = { doOnNoInternetSubscribe(contentView, noInternetView) },
     doOnNoInternet: (Throwable) -> Unit = { doOnNoInternet(contentView, errorView, noInternetView) },
     doOnStartEmptyContent: () -> Unit = { doOnEmptyContentSubscribe(contentView, emptyContentView) },

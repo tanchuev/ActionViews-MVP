@@ -14,7 +14,11 @@ class BaseSubscriber<T> : DisposableSubscriber<T> {
     private var onComplete: Action? = null
     private var onError: Consumer<Throwable>? = null
 
-    constructor(onNext: ((T) -> Unit)? = null, onComplete: (() -> Unit)? = null, onError: ((Throwable) -> Unit)? = null) {
+    constructor(
+        onNext: ((T) -> Unit)? = null,
+        onComplete: (() -> Unit)? = null,
+        onError: ((Throwable) -> Unit)? = null
+    ) {
         if (onNext != null) {
             this.onNext = Consumer { onNext(it) }
         }

@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/tanchuev/Maven/actionviews-viewmodel/images/download.svg) ](https://bintray.com/tanchuev/Maven/actionviews-viewmodel/_latestVersion) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[ ![Download](https://api.bintray.com/packages/tanchuev/Maven/actionviews-mvp/images/download.svg) ](https://bintray.com/tanchuev/Maven/actionviews-mvp/_latestVersion) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Описание
 Если ваше приложение:

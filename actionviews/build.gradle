@@ -27,11 +27,11 @@ android {
 publish {
     groupId = 'com.github.tanchuev'
     repoName = 'Maven'
-    artifactId = 'actionviews-viewmodel'
+    artifactId = 'actionviews-mvp'
     publishVersion = '0.7.0'
     desc = 'Library for exclude boilerplate code if you use some of this View types: LoadingView, NoInternetView, EmptyContentView, ErrorView'
     licences = ['MIT']
-    website = 'https://github.com/tanchuev/ActionViews-ViewModel'
+    website = 'https://github.com/tanchuev/ActionViews-MVP'
     userOrg = 'tanchuev'
 }
 

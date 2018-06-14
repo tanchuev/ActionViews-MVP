@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "0.7.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publish {
+    groupId = 'com.github.tanchuev'
+    repoName = 'Maven'
+    artifactId = 'actionviews-viewmodel'
+    publishVersion = '0.7.0'
+    desc = 'Library for exclude boilerplate code if you use some of this View types: LoadingView, NoInternetView, EmptyContentView, ErrorView'
+    licences = ['MIT']
+    website = 'https://github.com/tanchuev/ActionViews-ViewModel'
+    userOrg = 'tanchuev'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+
+    implementation "com.android.support:appcompat-v7:$supportLibrary"
+    implementation "com.android.support:design:$supportLibrary"
+
+    implementation "android.arch.lifecycle:extensions:$architectureComponents"
+
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+
+    implementation "com.github.bumptech.glide:glide:$glide"
+}
+
+tasks.withType(Javadoc).all {
+    enabled = false
+}
